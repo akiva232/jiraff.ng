@@ -1,0 +1,22 @@
+<h1>Welcome to World jiraff-Administration </h1>
+
+<div style="display:flex;" [style.background]="bgRND" >
+<ul class="force-jitem">
+    <j-item 
+    [j]="j" 
+    *ngFor="let j of jiraffsArray" 
+    class="j-item-as-list"
+
+    (clickNote)="selectedj=j"
+   
+    
+    (deleteNote)="deletej(j)"
+    (randomColorNote)="bgRND=$event">
+    
+</j-item>
+</ul>
+
+
+<j-details [j]="selectedj"></j-details>
+
+</div>
